@@ -23,6 +23,9 @@ if (($_SERVER['REQUEST_METHOD'] == 'GET' || $_SERVER['REQUEST_METHOD'] == 'POST'
                 }
             }
         }
+        if (array_key_exists($cmd_get_stock, $_REQUEST)) {
+            $id = $_REQUEST[$cmd_get_stock];
+        }
         if (array_key_exists($cmd_add_stock, $_REQUEST)) {
             $id = $_REQUEST[$cmd_add_stock];
             $connection->query("UPDATE producttypes SET stock=stock+1 WHERE id=". $id);

@@ -3,6 +3,7 @@
 # constantend voor beheer stock & producttypes.
 $cmd_add_stock="addstock";
 $cmd_subtract_stock="substock";
+$cmd_get_stock="getstock";
 $cmd_create_type="addtype";
 $cmd_change_type="changetype";
 $cmd_remove_type="removetype";

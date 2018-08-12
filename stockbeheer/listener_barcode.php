@@ -17,6 +17,7 @@ if ($id == $id_not_specified) {
     $result = $connection->query( "SELECT * FROM producttypes WHERE id=".$id );
     $row = $result->fetch_assoc();
     $jsonResult->error=0;
+    $jsonResult->typeId=$id;
     $jsonResult->name=$productname;
     $jsonResult->type=$row["name"];
     $jsonResult->stock=$row["stock"];
